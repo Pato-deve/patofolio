@@ -23,7 +23,7 @@ const Home: React.FC = () => {
               Proyectos
               <div
                 tabIndex={0}
-                className="w-auto h-auto ml-2 text-xl text-gray-700 rounded focus:outline-none hover:ring hover:ring-slate-600 focus:scale-110 focus:translate-x-20 focus:translate-y-10 focus:bg-gray-400/50 transform transition-transform duration-300"
+                className="w-auto h-auto ml-2 text-xl text-gray-700 rounded focus:outline-none hover:ring hover:ring-slate-600 focus:scale-110 focus:translate-x-20 focus:translate-y-10 focus:bg-gray-400/50 transform transition-transform duration-300 dark:tex-white"
               >
                 <a
                   href="https://itbank-psi.vercel.app/homebanking"
@@ -36,12 +36,12 @@ const Home: React.FC = () => {
                     height={500}
                     alt="Proyecto Academico hecho en next"
                   ></Image>
-                  <span className="text-base text-black dark:text-white">
-                    Esta Web fue desarrollada en Next, aprendimos lo basico,
-                    desde HTML, CSS, JS hasta aprender Next, indagamos en el uso
-                    de rutas dinamicas, client y server component
-                  </span>
                 </a>
+                <span className="text-base text-black dark:text-white">
+                  Esta Web fue desarrollada en Next, aprendimos lo basico, desde
+                  HTML, CSS, JS hasta aprender Next, indagamos en el uso de
+                  rutas dinamicas, client y server component
+                </span>
               </div>
             </div>
           </section>
