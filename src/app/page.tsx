@@ -23,7 +23,7 @@ const Home: React.FC = () => {
               Proyectos
               <div
                 tabIndex={0}
-                className="w-auto h-auto ml-2 text-xl text-gray-700 rounded focus:outline-none hover:ring hover:ring-slate-600 focus:scale-110 focus:translate-x-20 focus:translate-y-10 focus:bg-gray-400/50 transform transition-transform duration-300 dark:tex-white"
+                className="w-auto h-auto ml-2 text-xl text-gray-700 rounded focus:outline-none hover:ring hover:ring-slate-600 focus:scale-110 focus:translate-x-20 focus:translate-y-10 focus:bg-gray-400/50 transform transition-transform duration-300 dark:text-white"
               >
                 <a
                   href="https://itbank-psi.vercel.app/homebanking"
