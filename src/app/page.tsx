@@ -23,13 +23,14 @@ const Home: React.FC = () => {
               Proyectos
               <div
                 tabIndex={0}
-                className="w-auto h-auto ml-2 text-xl text-gray-700 rounded focus:outline-none hover:ring hover:ring-slate-600 focus:scale-110 focus:translate-x-20 focus:translate-y-10 focus:bg-gray-400/50 transform transition-transform duration-300 dark:text-white"
+                className="w-3/5 h-auto ml-2 p-2 text-xl text-gray-700 rounded focus:outline-none hover:ring focus:ring hover:ring-slate-600 focus:ring-slate-600 focus:scale-110 focus:translate-x-20 focus:translate-y-10 focus:bg-gray-400/50 transform transition-transform duration-300 dark:text-white"
               >
+                Instituto Tecnologico de Buenos Aires
                 <a
                   href="https://itbank-psi.vercel.app/homebanking"
                   target="_blank"
+                  className="w-fit"
                 >
-                  Instituto Tecnologico de Buenos Aires
                   <Image
                     src="/itbank.png"
                     width={500}
