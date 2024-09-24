@@ -46,6 +46,14 @@ const IconGallery: React.FC = () => {
             <Icon size={30} className="text-gray-400" />
           </div>
         ))}
+        {icons.map((Icon, index) => (
+          <div
+            key={`copy-${index}`}
+            className="flex justify-center items-center"
+          >
+            <Icon size={30} className="text-gray-400" />
+          </div>
+        ))}
       </div>
     </div>
   );
