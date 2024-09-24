@@ -19,7 +19,7 @@ const Home: React.FC = () => {
             <HiArrowLongRight />
           </Link>
         </div>
-        <main className="flex flex-col items-center justify-center w-full h-full">
+        <main className="flex flex-col items-center justify-center w-full h-full z-10">
           <div className="text-center opacity-100">
             <h1 className="text-3xl md:text-6xl text-black dark:text-white">
               Patricio Martinez
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
             <IconGallery />
           </div>
           <section className="m-4 text-2xl text-black dark:text-white box-border w-full">
-            <div className="p-4 w-full md:w-3/4 lg:w-1/2 h-auto bg-slate-100 dark:bg-gray-700 rounded mx-auto">
+            <div className="p-4 w-full md:w-3/4 lg:w-1/2 h-auto bg-slate-100/90 dark:bg-gray-700/90 rounded mx-auto">
               <b>Proyectos</b>
               <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4">
                 <div
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
               </div>
             </div>
           </section>
-          <footer className="p-4 w-2/4 bg-slate-100 rounded flex justify-center space-x-4 dark:bg-gray-600/50">
+          <footer className="p-4 w-2/4 bg-slate-100/90 rounded flex justify-center space-x-4 dark:bg-gray-600/50">
             <a
               href="https://github.com/Pato-deve"
               target="_blank"

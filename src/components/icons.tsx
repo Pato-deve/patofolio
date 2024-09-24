@@ -28,7 +28,7 @@ const IconGallery: React.FC = () => {
   });
 
   return (
-    <div className="bg-slate-100 dark:bg-gray-700/80 overflow-hidden w-full">
+    <div className="bg-slate-100/80 dark:bg-gray-700/80 overflow-hidden w-full">
       <div
         {...handlers}
         className="flex items-center justify-center space-x-8 animate-marquee whitespace-nowrap"
