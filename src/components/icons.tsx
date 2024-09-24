@@ -8,7 +8,6 @@ import {
   SiMysql,
   SiMongodb,
 } from "react-icons/si";
-import { useSwipeable } from "react-swipeable";
 
 const IconGallery: React.FC = () => {
   const icons = [
@@ -21,21 +20,12 @@ const IconGallery: React.FC = () => {
     SiMongodb,
   ];
 
-  const handlers = useSwipeable({
-    onSwipedLeft: () => console.log("Swiped left"),
-    onSwipedRight: () => console.log("Swiped right"),
-    trackMouse: true,
-  });
-
   return (
-    <div className="bg-slate-100/80 dark:bg-gray-700/80 overflow-hidden w-full">
-      <div
-        {...handlers}
-        className="flex items-center justify-center space-x-8 animate-marquee whitespace-nowrap"
-      >
+    <div className="relative bg-slate-100/80 dark:bg-gray-700/80 overflow-hidden w-full">
+      <div className="flex items-center space-x-8 animate-marquee whitespace-nowrap">
         {icons.map((Icon, index) => (
           <div key={index} className="flex justify-center items-center">
-            <Icon size={30} className="text-gray-300" />
+            <Icon size={40} className="text-gray-400 dark:text-gray-300" />
           </div>
         ))}
         {icons.map((Icon, index) => (
@@ -43,7 +33,12 @@ const IconGallery: React.FC = () => {
             key={`copy-${index}`}
             className="flex justify-center items-center"
           >
-            <Icon size={30} className="text-gray-400 dark:text-gray-300" />
+            <Icon size={40} className="text-gray-400 dark:text-gray-300" />
+          </div>
+        ))}
+        {icons.map((Icon, index) => (
+          <div key={index} className="flex justify-center items-center">
+            <Icon size={40} className="text-gray-400 dark:text-gray-300" />
           </div>
         ))}
         {icons.map((Icon, index) => (
@@ -51,7 +46,20 @@ const IconGallery: React.FC = () => {
             key={`copy-${index}`}
             className="flex justify-center items-center"
           >
-            <Icon size={30} className="text-gray-400 dark:text-gray-300" />
+            <Icon size={40} className="text-gray-400 dark:text-gray-300" />
+          </div>
+        ))}
+        {icons.map((Icon, index) => (
+          <div key={index} className="flex justify-center items-center">
+            <Icon size={40} className="text-gray-400 dark:text-gray-300" />
+          </div>
+        ))}
+        {icons.map((Icon, index) => (
+          <div
+            key={`copy-${index}`}
+            className="flex justify-center items-center"
+          >
+            <Icon size={40} className="text-gray-400 dark:text-gray-300" />
           </div>
         ))}
       </div>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import Link from "next/link";
 import { HiArrowLongRight } from "react-icons/hi2";
+import "./assets/global.css";
 
 const Home: React.FC = () => {
   return (
@@ -28,7 +29,7 @@ const Home: React.FC = () => {
               Desarrollador de Software
             </span>
           </div>
-          <div className="flex justify-center items-center h-20 w-2/6 mt-6 hover:scale-110 transform transition-transform duration-300">
+          <div className="flex justify-center items-center h-20 w-1/2 mt-6 hover:scale-110 transform transition-transform duration-300">
             <IconGallery />
           </div>
           <section className="m-4 text-2xl text-black dark:text-white box-border w-full">
