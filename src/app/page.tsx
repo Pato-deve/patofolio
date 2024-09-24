@@ -4,14 +4,22 @@ import IconGallery from "../components/icons";
 import Toggle from "../components/ToggleTheme";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import Link from "next/link";
+import { HiArrowLongRight } from "react-icons/hi2";
 
 const Home: React.FC = () => {
   return (
     <div className="relative w-full min-h-screen overflow-x-hidden bg-white dark:bg-black">
       <ParticlesThree />
       <div className="space-y-4 m-2 flex flex-col z-10 bg-gray-800/40 dark:bg-gray-800/60 min-w-screen min-h-screen border-4 border-black p-4 dark:border-white">
-        <main className="flex flex-col items-center justify-center w-full h-full">
+        <div className="flex justify-between z-20">
           <Toggle />
+          <Link href="/practicas">
+            Practicas
+            <HiArrowLongRight />
+          </Link>
+        </div>
+        <main className="flex flex-col items-center justify-center w-full h-full">
           <div className="text-center opacity-100">
             <h1 className="text-3xl md:text-6xl text-black dark:text-white">
               Patricio Martinez
@@ -24,7 +32,7 @@ const Home: React.FC = () => {
             <IconGallery />
           </div>
           <section className="m-4 text-2xl text-black dark:text-white box-border w-full">
-            <div className="p-4 w-full md:w-3/4 lg:w-1/2 h-auto bg-gray-300 dark:bg-gray-700 rounded mx-auto">
+            <div className="p-4 w-full md:w-3/4 lg:w-1/2 h-auto bg-slate-100 dark:bg-gray-700 rounded mx-auto">
               <b>Proyectos</b>
               <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4">
                 <div
@@ -81,7 +89,7 @@ const Home: React.FC = () => {
               </div>
             </div>
           </section>
-          <footer className="p-4 w-2/4 bg-gray-600/50 rounded flex justify-center space-x-4">
+          <footer className="p-4 w-2/4 bg-slate-100 rounded flex justify-center space-x-4 dark:bg-gray-600/50">
             <a
               href="https://github.com/Pato-deve"
               target="_blank"
