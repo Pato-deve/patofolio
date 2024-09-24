@@ -1,9 +1,25 @@
 "use client";
-import { SiTypescript, SiReact, SiNextdotjs } from "react-icons/si";
+import { DiDjango } from "react-icons/di";
+import {
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiPython,
+  SiMysql,
+  SiMongodb,
+} from "react-icons/si";
 import { useSwipeable } from "react-swipeable";
 
 const IconGallery: React.FC = () => {
-  const icons = [SiNextdotjs, SiTypescript, SiReact];
+  const icons = [
+    SiNextdotjs,
+    SiTypescript,
+    SiReact,
+    SiPython,
+    SiMysql,
+    DiDjango,
+    SiMongodb,
+  ];
 
   const handlers = useSwipeable({
     onSwipedLeft: () => console.log("Swiped left"),
@@ -12,14 +28,14 @@ const IconGallery: React.FC = () => {
   });
 
   return (
-    <div className="relative w-64 h-12 p-1 overflow-hidden bg-gray-500/50">
+    <div className="bg-gray-500/50 overflow-hidden w-full">
       <div
         {...handlers}
-        className="inline-flex items-center space-x-8 animate-marquee ml-2"
+        className="flex items-center justify-center space-x-8 animate-marquee whitespace-nowrap"
       >
         {icons.map((Icon, index) => (
           <div key={index} className="flex justify-center items-center">
-            <Icon className="w-10 h-10 text-gray-400" />
+            <Icon size={30} className="text-gray-400" />
           </div>
         ))}
         {icons.map((Icon, index) => (
@@ -27,7 +43,7 @@ const IconGallery: React.FC = () => {
             key={`copy-${index}`}
             className="flex justify-center items-center"
           >
-            <Icon className="w-10 h-10 text-gray-400" />
+            <Icon size={30} className="text-gray-400" />
           </div>
         ))}
       </div>

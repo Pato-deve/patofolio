@@ -12,13 +12,12 @@ const Home: React.FC = () => {
       <main className="absolute inset-0 m-2 flex items-center justify-center">
         <div className="space-y-4 absolute inset-0 flex flex-col z-10 bg-gray-600/70 dark:bg-gray-800/50 text-white w-full h-full border-4 border-black box-border p-4 dark:border-white">
           <Toggle />
-          <h1 className="text-6xl animate-fade-in text-black dark:text-white">
+          <h1 className="text-3xl md:text-6xl animate-fade-in text-black dark:text-white text-center">
             Patricio Martinez
           </h1>
-          <span className="ml-2 text-black dark:text-white">
+          <span className="ml-2 text-lg md:text-xl text-black dark:text-white text-center">
             Desarrollador de Software
           </span>
-          <IconGallery />
           <section className="m-2 text-2xl text-black dark:text-white box-border">
             <div className="p-2 w-1/2 h-auto bg-gray-600/50 rounded">
               Proyectos
@@ -68,6 +67,9 @@ const Home: React.FC = () => {
                   </span>
                 </div>
               </div>
+            </div>
+            <div className="flex justify-center items-center h-20 w-2/4 content-center">
+              <IconGallery />
             </div>
           </section>
           <footer className="p-2 w-fit h-auto bg-gray-600/50 rounded">
