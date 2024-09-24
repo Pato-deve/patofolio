@@ -7,92 +7,98 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const Home: React.FC = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-white dark:bg-black">
+    <div className="relative w-full min-h-screen overflow-x-hidden bg-white dark:bg-black">
       <ParticlesThree />
-      <main className="absolute inset-0 m-2 flex items-center justify-center">
-        <div className="space-y-4 absolute inset-0 flex flex-col z-10 bg-gray-600/70 dark:bg-gray-800/50 text-white w-full h-full border-4 border-black box-border p-4 dark:border-white">
+      <div className="space-y-4 m-2 flex flex-col z-10 bg-gray-800/40 dark:bg-gray-800/60 min-w-screen min-h-screen border-4 border-black p-4 dark:border-white">
+        <main className="flex flex-col items-center justify-center w-full h-full">
           <Toggle />
-          <h1 className="text-3xl md:text-6xl animate-fade-in text-black dark:text-white text-center">
-            Patricio Martinez
-          </h1>
-          <span className="ml-2 text-lg md:text-xl text-black dark:text-white text-center">
-            Desarrollador de Software
-          </span>
-          <section className="m-2 text-2xl text-black dark:text-white box-border">
-            <div className="p-2 w-1/2 h-auto bg-gray-600/50 rounded">
-              Proyectos
-              <div className="flex">
+          <div className="text-center opacity-100">
+            <h1 className="text-3xl md:text-6xl text-black dark:text-white">
+              Patricio Martinez
+            </h1>
+            <span className="ml-2 text-lg md:text-xl text-black dark:text-white">
+              Desarrollador de Software
+            </span>
+          </div>
+          <div className="flex justify-center items-center h-20 w-2/6 mt-6 hover:scale-110 transform transition-transform duration-300">
+            <IconGallery />
+          </div>
+          <section className="m-4 text-2xl text-black dark:text-white box-border w-full">
+            <div className="p-4 w-full md:w-3/4 lg:w-1/2 h-auto bg-gray-300 dark:bg-gray-700 rounded mx-auto">
+              <b>Proyectos</b>
+              <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4">
                 <div
                   tabIndex={0}
-                  className="z-10 w-3/5 h-auto ml-2 p-2 text-xl text-gray-700 rounded focus:outline-none hover:ring focus:ring hover:ring-slate-600 focus:ring-slate-600 focus:scale-110 focus:translate-x-20 focus:translate-y-10 focus:bg-gray-400 transform transition-transform duration-300 dark:text-white"
+                  className="z-10 w-full md:w-1/2 p-4 text-xl text-gray-700 rounded focus:outline-none hover:ring focus:ring hover:ring-slate-600 focus:ring-slate-600 focus:scale-105 transform transition-transform duration-300 dark:text-white bg-gray-300 dark:bg-gray-700"
                 >
-                  Pagina bancaria
+                  <h3>Pagina bancaria</h3>
                   <a
                     href="https://itbank-psi.vercel.app/homebanking"
                     target="_blank"
-                    className="w-fit"
+                    className="block mt-2"
                   >
                     <Image
                       src="/itbank.png"
                       width={500}
                       height={500}
                       alt="Proyecto Academico hecho en next"
-                    ></Image>
+                      className="w-full h-auto rounded"
+                    />
                   </a>
-                  Instituto Tecnologico de Buenos Aires<br></br>
-                  <span className="text-base text-black dark:text-white">
-                    Esta Web fue desarrollada en Next, aprendimos lo basico,
-                    desde HTML, CSS, JS hasta aprender Next, indagamos en el uso
-                    de rutas dinamicas, client y server component
+                  <b className="block mt-4">
+                    Instituto Tecnologico de Buenos Aires
+                  </b>
+                  <span className="text-base text-black dark:text-white block mt-2">
+                    Esta Web fue desarrollada en <b>Next</b>, aprendimos lo
+                    básico, desde <b>HTML, CSS, JS</b> hasta aprender
+                    <b>Next</b>, indagamos en el uso de rutas dinámicas, client
+                    y server components.
                   </span>
                 </div>
                 <div
                   tabIndex={0}
-                  className="z-0 w-3/5 h-auto ml-2 p-2 text-xl text-gray-700 rounded focus:outline-none hover:ring focus:ring hover:ring-slate-600 focus:ring-slate-600 focus:scale-110 focus:translate-x-20 focus:translate-y-10 focus:bg-gray-400 transform transition-transform duration-300 dark:text-white"
+                  className="z-10 w-full md:w-1/2 p-4 text-xl text-gray-700 rounded focus:outline-none hover:ring focus:ring hover:ring-slate-600 focus:ring-slate-600 focus:scale-105 transform transition-transform duration-300 dark:text-white bg-gray-300 dark:bg-gray-700"
                 >
-                  Base de datos de una pagina bancaria
-                  <a href="" target="_blank" className="w-fit">
+                  <h3>Base de datos de un banco</h3>
+                  <a href="" target="_blank" className="block mt-2">
                     <Image
                       src="/workProgress.png"
                       width={500}
                       height={500}
                       alt="Proyecto Academico hecho en next"
-                    ></Image>
+                      className="w-full h-auto rounded"
+                    />
                   </a>
-                  Instituto Tecnologico de Buenos Aires<br></br>
-                  <span className="text-base text-black dark:text-white">
-                    En este proyecto vamos a trabajar con Python, Django,
-                    MongoDB y SQL para crear la base de datos del proyecto
-                    anterior
+                  <b className="block mt-4">
+                    Instituto Tecnologico de Buenos Aires
+                  </b>
+                  <span className="text-base text-black dark:text-white block mt-2">
+                    En este proyecto vamos a trabajar con
+                    <b>Python, Django, MongoDB y SQL</b> para crear la base de
+                    datos del proyecto anterior.
                   </span>
                 </div>
               </div>
             </div>
-            <div className="flex justify-center items-center h-20 w-2/4 content-center">
-              <IconGallery />
-            </div>
           </section>
-          <footer className="p-2 w-fit h-auto bg-gray-600/50 rounded">
-            Links de interes
-            <div className="flex">
-              <a
-                href="https://github.com/Pato-deve"
-                target="_blank"
-                className="hover:ring hover:ring-slate-600 m-2"
-              >
-                <FaGithub size={30}></FaGithub>
-              </a>
-              <a
-                href="https://linkedin.com/in/patricio-martínez-86a001180"
-                target="_blank"
-                className="hover:ring hover:ring-slate-600 m-2"
-              >
-                <FaLinkedin size={30}></FaLinkedin>
-              </a>
-            </div>
+          <footer className="p-4 w-2/4 bg-gray-600/50 rounded flex justify-center space-x-4">
+            <a
+              href="https://github.com/Pato-deve"
+              target="_blank"
+              className="hover:ring hover:ring-slate-600 text-black dark:text-white z-40"
+            >
+              <FaGithub size={30} />
+            </a>
+            <a
+              href="https://linkedin.com/in/patricio-martínez-86a001180"
+              target="_blank"
+              className="hover:ring hover:ring-slate-600 text-black dark:text-white z-40"
+            >
+              <FaLinkedin size={30} />
+            </a>
           </footer>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 };

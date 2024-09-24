@@ -38,7 +38,7 @@ const ParticlesWithClusters = () => {
     const circleTexture = new THREE.CanvasTexture(canvas);
 
     const particleGeometry = new THREE.BufferGeometry();
-    const particleCount = 1100;
+    const particleCount = 900;
     const positions = new Float32Array(particleCount * 3);
     const velocities = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
@@ -58,7 +58,6 @@ const ParticlesWithClusters = () => {
       new THREE.BufferAttribute(colors, 3)
     );
 
-    // Material de partículas
     const particleMaterial = new THREE.PointsMaterial({
       size: 3,
       map: circleTexture,
@@ -69,21 +68,18 @@ const ParticlesWithClusters = () => {
       blending: THREE.AdditiveBlending,
     });
 
-    // Sistema de partículas
     const particleSystem = new THREE.Points(particleGeometry, particleMaterial);
     scene.add(particleSystem);
 
-    // Material para líneas
     const lineMaterial = new THREE.LineBasicMaterial({
       color: 0xcccccc,
       opacity: 0.5,
-      transparent: true, // Necesario para que la opacidad funcione
+      transparent: true,
     });
 
     let lineGeometry = new THREE.BufferGeometry();
     let lineSegments;
 
-    // Función para calcular la distancia entre dos partículas
     const calculateDistance = (i, j, pos) => {
       const dx = pos[i * 3] - pos[j * 3];
       const dy = pos[i * 3 + 1] - pos[j * 3 + 1];
@@ -91,7 +87,6 @@ const ParticlesWithClusters = () => {
       return Math.sqrt(dx * dx + dy * dy + dz * dz);
     };
 
-    // Función para detectar y dibujar clusters
     const detectClusters = () => {
       if (lineSegments) {
         scene.remove(lineSegments);
@@ -100,8 +95,8 @@ const ParticlesWithClusters = () => {
       }
 
       let newLinePositions = [];
-      const clusterSize = 49;
-      const clusterConnectionsLimit = 15;
+      const clusterSize = 45;
+      const clusterConnectionsLimit = 10;
 
       const positionAttribute =
         particleSystem.geometry.attributes.position.array;
@@ -138,7 +133,6 @@ const ParticlesWithClusters = () => {
       }
     };
 
-    // Animación
     const animate = () => {
       requestAnimationFrame(animate);
 
@@ -161,7 +155,6 @@ const ParticlesWithClusters = () => {
 
         positionAttribute.setXYZ(i, x, y, z);
 
-        // Actualizar los valores en el array original para detectClusters
         positions[i * 3] = x;
         positions[i * 3 + 1] = y;
         positions[i * 3 + 2] = z;
@@ -181,7 +174,6 @@ const ParticlesWithClusters = () => {
 
     animate();
 
-    // Manejar el redimensionamiento de la ventana
     const handleResize = () => {
       width = window.innerWidth;
       height = window.innerHeight;
@@ -197,7 +189,6 @@ const ParticlesWithClusters = () => {
       if (mountRef.current) {
         mountRef.current.removeChild(renderer.domElement);
       }
-      // limpiar lineas viejas
       particleGeometry.dispose();
       particleMaterial.dispose();
       if (lineSegments) {

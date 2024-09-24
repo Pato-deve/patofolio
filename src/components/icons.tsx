@@ -28,14 +28,14 @@ const IconGallery: React.FC = () => {
   });
 
   return (
-    <div className="bg-gray-500/50 overflow-hidden w-full">
+    <div className="bg-gray-700/80 overflow-hidden w-full">
       <div
         {...handlers}
         className="flex items-center justify-center space-x-8 animate-marquee whitespace-nowrap"
       >
         {icons.map((Icon, index) => (
           <div key={index} className="flex justify-center items-center">
-            <Icon size={30} className="text-gray-400" />
+            <Icon size={30} className="text-gray-300" />
           </div>
         ))}
         {icons.map((Icon, index) => (
@@ -43,7 +43,7 @@ const IconGallery: React.FC = () => {
             key={`copy-${index}`}
             className="flex justify-center items-center"
           >
-            <Icon size={30} className="text-gray-400" />
+            <Icon size={30} className="text-gray-300" />
           </div>
         ))}
         {icons.map((Icon, index) => (
@@ -51,7 +51,7 @@ const IconGallery: React.FC = () => {
             key={`copy-${index}`}
             className="flex justify-center items-center"
           >
-            <Icon size={30} className="text-gray-400" />
+            <Icon size={30} className="text-gray-300" />
           </div>
         ))}
       </div>
