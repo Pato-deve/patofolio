@@ -42,7 +42,7 @@ const Home: React.FC = () => {
                 >
                   <h3>Pagina bancaria</h3>
                   <a
-                    href="https://itbank-psi.vercel.app/homebanking"
+                    href="https://itbank-psi.vercel.app"
                     target="_blank"
                     className="block mt-2"
                   >
