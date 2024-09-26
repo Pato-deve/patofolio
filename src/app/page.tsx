@@ -51,7 +51,7 @@ const Home: React.FC = () => {
                       width={500}
                       height={500}
                       alt="Proyecto Academico hecho en next"
-                      className="w-full h-auto rounded"
+                      className="w-full h-auto rounded hover:ring-slate-500 hover:ring-1 transition-all"
                     />
                   </a>
                   <b className="block mt-4">
@@ -75,7 +75,7 @@ const Home: React.FC = () => {
                       width={500}
                       height={500}
                       alt="Proyecto Academico hecho en next"
-                      className="w-full h-auto rounded"
+                      className="w-full h-auto rounded hover:ring-slate-500 hover:ring-2  transition-all"
                     />
                   </a>
                   <b className="block mt-4">
