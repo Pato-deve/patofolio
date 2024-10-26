@@ -83,8 +83,8 @@ const Home: React.FC = () => {
                   </b>
                   <span className="text-base text-black dark:text-white block mt-2">
                     En este proyecto vamos a trabajar con
-                    <b>Python, Django, MongoDB y SQL</b> para crear la base de
-                    datos del proyecto anterior.
+                    <b>Python</b> para el tratamiento de las transacciones y{" "}
+                    <b>SQL</b> para crear la base de datos de un banco.
                   </span>
                 </div>
               </div>

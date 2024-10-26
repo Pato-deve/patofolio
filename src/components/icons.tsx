@@ -1,24 +1,14 @@
 "use client";
-import { DiDjango } from "react-icons/di";
 import {
   SiTypescript,
   SiReact,
   SiNextdotjs,
   SiPython,
   SiMysql,
-  SiMongodb,
 } from "react-icons/si";
 
 const IconGallery: React.FC = () => {
-  const icons = [
-    SiNextdotjs,
-    SiTypescript,
-    SiReact,
-    SiPython,
-    SiMysql,
-    DiDjango,
-    SiMongodb,
-  ];
+  const icons = [SiNextdotjs, SiTypescript, SiReact, SiPython, SiMysql];
 
   return (
     <div className="relative bg-slate-100/80 dark:bg-gray-700/80 overflow-hidden w-full">
